@@ -6,11 +6,11 @@ namespace GenericRepository
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
         // Change this context class to your own;
-        private readonly ExampleDbContext _context;
+        private readonly DbContext _context;
         private readonly DbSet<TEntity> _dbSet;
-        public BaseRepository(ExampleDbContext context)
+        public BaseRepository(DbContext context)
         {
-            _context = context;
+            _context = 
             _dbSet = _context.Set<TEntity>();
         }
 
@@ -30,6 +30,7 @@ namespace GenericRepository
         {
             if (_context.Entry(entity).State == EntityState.Detached)
                 _dbSet.Attach(entity);
+
             _dbSet.Remove(entity);
         }
 

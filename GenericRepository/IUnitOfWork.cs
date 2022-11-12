@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericRepository
+﻿namespace GenericRepository
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork // you need to inherite from this interface in your dbContext Class 
     {
-        Task<int> SaveChangesAsync();
         int SaveChanges();
     }
 }

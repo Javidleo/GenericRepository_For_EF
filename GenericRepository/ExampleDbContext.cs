@@ -2,8 +2,8 @@
 
 namespace GenericRepository
 {
-    public class ExampleDbContext : DbContext
+    public class ExampleDbContext : DbContext, IUnitOfWork
     {
-        
+
     }
 }

@@ -18,7 +18,7 @@ namespace GenericRepository
         Task<List<TEntity>> FindAllAsync();
 
         // Search Query  take an expression and return a list of expected entity
-        Task<List<TEntity>> Search(Expression<Func<TEntity,bool>> filter);
+        Task<List<TEntity>> Search(Expression<Func<TEntity, bool>> filter);
 
 
         // Does Exist // check for input query and return true if Exist and false if it is not existed 
